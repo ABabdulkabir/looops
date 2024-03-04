@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+      
+
+
+<script>
+    var number= parseInt(prompt("enter a number :"));
+
+    for (let i = 1; i <= 10; i++){
+        document.getElementById("Multipilication-table").innerHTML +=
+        `${ number} * ${i} = ${number*i}<br>`;
+    }
+
+   
+   // Loop numbers from 1 to 20
+for (let i = 1; i <= 20; i++) {
+    // Check if the number is even
+    if (i % 2 === 0) {
+        // If it's even, print it
+        console.log(i);
+    }
+}
+
+
+let sum = 0;
+
+// Loop numbers from 1 to 100
+for (let i = 1; i <= 100; i++) {
+    // Add each number to the sum
+    sum += i;
+}
+
+// Print the sum
+console.log("The sum of all numbers from 1 to 100 is:", sum);
+
+
+
+function factorial(number) {
+    // Base case: factorial of 0 or 1 is 1
+    if (number === 0 || number === 1) {
+        return 1;
+    } else {
+        // factorial of n is n multiplied by factorial of (n - 1)
+        return number * factorial(number - 1);
+    }
+}
+
+// Example:
+const num = 5; // Change this to any number you want to find the factorial:
+const result = factorial(num);
+console.log(`The factorial of ${num} is:`, result);*/
+
+
+function generateFibonacci(terms) {
+    let fibonacciSequence = [];
+    
+    // First two terms of the Fibonacci sequence
+    let a = 0;
+    let b = 1;
+
+    // Push the first two terms into the sequence
+    fibonacciSequence.push(a);
+    fibonacciSequence.push(b);
+
+    // Generate subsequent terms
+    for (let i = 2; i < terms; i++) {
+        let nextTerm = a + b;
+        fibonacciSequence.push(nextTerm);
+        a = b;
+        b = nextTerm;
+    }
+
+    return fibonacciSequence;
+}
+
+// Example usage:
+const numberOfTerms = 10; // Change this to specify the number of terms
+const fibonacciSequence = generateFibonacci(numberOfTerms);
+console.log(`The Fibonacci sequence up to ${numberOfTerms} terms is:`, fibonacciSequence);
+``
+</script>
+</body>
+</html>
